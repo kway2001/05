@@ -7,15 +7,14 @@ int main(int argc, char *argv[]) {
 	
 	int a;
 	
-	printf("input number: ");
+	printf("정수 하나를 입력하세요.: ");
 	scanf("%d", &a);
 	
-	if (a>0)
-		printf("%d is positive number\n", a);
-	else if (a==0)
-		printf("%d is zero\n", a);
-	else
-		printf("%d is negtive number\n", a);
+	if (a<0)
+		a = a*(-1);
+	
+	printf("절댓값은 %i 입니다.\n", a);
+	
 	
 	return 0;
 }
