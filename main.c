@@ -5,17 +5,25 @@
 
 int main(int argc, char *argv[]) {
 	
-	int sum=0;
-	int i;
-	int j;
+	int answer=59;
+	int i, trial=0;
 	
-	printf("input a number: ");
-	scanf("%i", &j);	
+	do
+	{
+		printf("input a number: ");
+		scanf("%i", &i);
+		
+		if (answer > i)
+			printf("low!\n");
+		else if (answer < i)
+			printf("high!\n");
+			
+		trial++;	
+	}
+		
+	while (i != answer);
 	
-	for(i=1; i<=j; i++)
-		sum += i;
-	
-	printf("the sum result is %i\n", sum);
-	
+	printf("Conglaturation, number of trial: %i\n", trial);
+
 	return 0;
 }
